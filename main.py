@@ -3,6 +3,7 @@ import discord
 import wikipedia
 from dotenv import load_dotenv
 from discord.ext import commands
+from utils.database import create_connection
 
 def main():
     load_dotenv()
@@ -23,7 +24,7 @@ def main():
     try: 
         print('Reading token...')
         token = os.getenv('TOKEN')
-        print('Token obtained...')
+        print('Token obtained!')
     except:
         raise ValueError('Error obtaining the token')
 
@@ -34,7 +35,6 @@ def main():
 
 
     bot.run(token)
-
 
 if __name__ == '__main__':
     print('################ DISCORD BOT ###############')

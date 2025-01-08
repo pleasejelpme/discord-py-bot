@@ -1,3 +1,4 @@
 env
 .env
+botdb.db
 **/__pycache__/
